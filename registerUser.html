@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new jobs</title>
+    <link rel="stylesheet" href="registerUser.css">
+    <link rel="stylesheet" href="reset.css">
+
+</head>
+<body>
+    <div class="formCadastro" id="formCadastro">
+        <form action="" class="cadastro" method="POST">
+            <div class="typePerson">
+                <select name="selectType" id="selectType">
+                    <option value="física" selected>Pessoa física</option>
+                    <option value="juridica">Pessoa Júridica</option>
+                </select>
+            </div>
+            <div class="name">
+                <label for="name" id="labelName">nome:</label>
+                <input type="text" id="name" placeholder="digite Seu nome">
+            </div>
+            <div class="cpf">
+                <label for="cpf" id="labelCpf">cpf:</label>
+                <input type="text" id="cpf" placeholder="digite seu cpf">
+            </div>
+            <div class="email">
+                <label for="email" id="labelEmail">email:</label>
+                <input type="text" id="email" placeholder="Digite seu Email">
+            </div>
+            <div class="password">
+                <label for="password" id="labelPassword">senha:</label>
+                <input type="text" id="password" placeholder="digíte uma senha">
+            </div>
+
+            <button type="submit" id="storeUser" value="send">cadastrar usuario</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+
+var form = document.querySelector(".formCadastro");
+    var nome = document.querySelector("#name");
+
+form.addEventListener('submit', function(e) {
+
+    // alerta o valor do campo
+    console.log(nome.value);
+    fetch("http://127.0.0.1:8000/auth/api/registerUser", {
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+    },
+    })
+    .then(function(){
+
+    }).catch(function(){
+
+    });
+    // impede o envio do form
+    e.preventDefault();
+});
+</script>
+

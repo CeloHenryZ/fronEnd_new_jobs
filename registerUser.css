@@ -1,0 +1,44 @@
+body{
+    background: rgb(26,167,212);
+    background: linear-gradient(249deg, rgba(26,167,212,1) 0%, rgba(14,104,133,1) 66%, rgba(7,72,93,1) 100%);
+}
+.formCadastro{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+
+    min-width: 20%;
+    height: 300px;
+    border-radius: 5px;
+}
+
+#name, #email, #password, #cpf, #storeUser{
+    padding: 5px;
+    outline: none;
+    border: 0px;
+    border-bottom: 1px solid;
+}
+
+.name, .email, .password, .cpf{
+    margin: 10px;
+}
+.typePerson{
+    height: 80px;
+}
+
+#selectType{
+    margin-top: 10px;
+    width: 200px;
+    height: 35px;
+    outline: none;
+}
